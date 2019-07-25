@@ -16,12 +16,15 @@ export class TableComponent {
     { firstName: "Leonardo", lastName: "Messiah", age: 25, slug: 'leonardo-messiah' }
   ]
 
+
   setSlug(slug) {
+    this.selectedSlug = slug;
+    console.log(this.selectedSlug);
     // slug setter function
   }
 
   getSlug() {
     // slug getter function 
-      return "random string";
+      return this.selectedSlug;
   }
 }
