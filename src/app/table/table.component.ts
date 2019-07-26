@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter} from '@angular/core';
+import { InfoComponent } from '../info/info.component';
 
 @Component({
   selector: 'customer-table',
@@ -6,8 +7,10 @@ import { Component } from '@angular/core';
 })
 export class TableComponent {
 
+  @Output() clicked = new EventEmitter<string>();
   selectedSlug: string = "";
-  constructor() { }
+  constructor() {
+   }
   customers = [
     { firstName: "Henry", lastName: "Gerard", age: 21, slug: 'henry-gerard' },
     { firstName: "Michael", lastName: "Platini", age: 40, slug: 'michael-platini' },
@@ -16,10 +19,13 @@ export class TableComponent {
     { firstName: "Leonardo", lastName: "Messiah", age: 25, slug: 'leonardo-messiah' }
   ]
 
+  clickCustomer(slug) {
+    this.setSlug(slug);
+    this.clicked.emit(this.getSlug());
+  }
 
   setSlug(slug) {
-    this.selectedSlug = slug;
-    console.log(this.selectedSlug);
+     this.selectedSlug = slug;
     // slug setter function
   }
 

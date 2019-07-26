@@ -12,8 +12,7 @@
       <td>{{customer.firstName}}</td>
       <td>{{customer.lastName}}</td>
       <td>{{customer.age}}</td>
-      <td class="text-center"><a class="btn btn-default btn-primary" id="fill slug" role="button" (click)="setSlug(customer.slug)">View Info</a></td>
+      <td class="text-center"><a class="btn btn-default btn-primary " id={{customer.slug}} role="button" (click)="clickCustomer(customer.slug)">View Info</a></td>
     </tr>
   </table>
 </div>
-<info-table [customerSlug] = "selectedSlug"></info-table>

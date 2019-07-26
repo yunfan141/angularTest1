@@ -3,8 +3,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'customer-database',
   template: `
-            <customer-table></customer-table>
-            <info-table></info-table>
+            <customer-table  (clicked)="onClicked($event)"></customer-table>
+            <info-table [customerSlug] = "clikedCustomer"></info-table>
             `
 })
-export class AppComponent {}
+export class AppComponent {
+  clikedCustomer: string;
+  onClicked(customer: string) {
+    this.clikedCustomer = customer;
+  }
+}

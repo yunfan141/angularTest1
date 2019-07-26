@@ -1,12 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input} from '@angular/core';
 
 @Component({
   selector: 'info-table',
   templateUrl: './info.component.html',
 })
 export class InfoComponent {
-  @Input() customerSlug: String;
-  // customerSlug: string = ""; // slug instance variable of InfoComponent
+  @Input() customerSlug: string = ""; // slug instance variable of InfoComponent
+
   customers = {
     'henry-gerard':
     ["Henry", "Gerard", 21, 'Livershool', 'Male', '3123', 'India', 'TN'],
@@ -19,10 +19,6 @@ export class InfoComponent {
     'leonardo-messiah':
     ["Leonardo", "Messiah", 25, 'Barceloja', 'Female', '3165', 'Argentina', 'BA']
   }
-  constructor() { 
+  constructor() {
   }
-
-
-
-
 }
