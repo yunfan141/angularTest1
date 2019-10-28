@@ -17,7 +17,7 @@ export class InfoComponent {
     'cristiana-ronaldinho':
     ["Cristiana", "Ronaldinho", 15, 'Portugalia', 'Female', '3178', 'Portugal', 'LB'],
     'leonardo-messiah':
-    ["Leonardo", "Messiah", 25, 'Barceloja', 'Female', '3165', 'Argentina', 'BA']
+    ["Leonardo", "Messiah ", 25, 'Barceloja', 'Female', '3165', 'Argentina', 'BA']
   }
   constructor() {
   }
